@@ -9,15 +9,15 @@
 </head>
 <body>
 
+<!-- JSTL -->
 <c:set scope="session" var="name" value="<b>David</b>"/>
 Bienvenido <c:out value="Hola ${sessionScope.name}" default="Invitado" escapeXml="false"/>
 
 <br>
+<!-- SCRIPTLET -->
 <% 
-
 session.setAttribute("name", "<b>David</b>");
 out.print("Bienvenido Hola " + session.getAttribute("name"));
-
 %>
 
 
